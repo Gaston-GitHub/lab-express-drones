@@ -10,13 +10,7 @@ const drones = [
 
 
 const mongoose = require('mongoose')
-const DB_NAME = 'mongodb://localhost/3000'
-mongoose.connect(`${DB_NAME}`,{
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
- 
+mongoose.connect('mongodb://localhost/express-drones-dev')
 
 Drone.create(drones)
 .then(drone => {
